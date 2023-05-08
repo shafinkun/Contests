@@ -4,25 +4,33 @@ int main()
 {
     int n,c,count=0;
     cin>>n;
-    for(n;n>=5;n=n-5)
-    {
-        count++;
+    if(n%5==0){
+        count=n/5;
     }
-    // cout<<count<<endl;
-    if(n>=4)for(n;n>=4;n=n-4)
-    {
-        count++;
+    else {
+        count=count+n/5;
+        n=n%5;
+        if(n%4==0){
+        count=count+n/4;}
+        else {
+            count=count+n/4;
+            n=n%4;
+            if(n%3==0){
+                count=count+n/3;
+            }
+            else{
+                count=count+n/3;
+                n=n%3;
+                if(n%2==0){
+                    count=count+n/2;
+                }
+                else{
+                    count=count+n/2+1;
+                }
+            }
+        }
     }
-    if(n>=3)for(n;n>=3;n=n-3)
-    {
-        count++;
-    }
-    if(n>=2)for(n;n>=2;n=n-2)
-    {
-        count++;
-    }
-    if(n>=1) {count++;}
-    cout<<count<<endl;
+    cout<<count;
     
     return 0;
 }
