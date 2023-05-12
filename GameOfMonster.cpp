@@ -17,8 +17,7 @@ int main()
                 count1++;
             }
         }
-        spell1 = count1 / 2;
-        cout << n - spell1 << endl;
+        cout << n - count1/2 << endl;
     }
     return 0;
 }
