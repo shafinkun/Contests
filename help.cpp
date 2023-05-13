@@ -1,49 +1,46 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-void arr();
 int main()
 {
-    int t;
-    cin>>t;
-    while(t--)
+    int q;
+    cin >> q;
+    while (q--)
     {
-        int max=1;
-        int n,time;
-        cin>>n>>time;
-        bool check=true;
-        arr(n);
-        // int n,time;
-        // cin>>n>>time;
-        // int vid[n];
-        // for(int i=0;i<n;i++)
-        // {
-        //     cin>>vid[i];
-        // }
-        // int ent[n];
-        // for(int i=0;i<n;i++)
-        // {
-        //     cin>>ent[i];
-        // }
-        for(int i=0;i<n;i++)
+        int n, t, max = 0, index;
+        cin >> n >> t;
+        int VidLen[n];
+        for (int i = 0; i < n; i++)
         {
-           // cout<<a[i]<<"\t";
+            cin >> VidLen[i];
         }
-        if(check){
+        int EntVal[n];
+        for (int i = 0; i < n; i++)
+        {
+            cin >> EntVal[i];
+        }
+        for (int i = 0; i < n; i++)
+        {
             
+            if (VidLen[i] <= t)
+            {
+                t--;
+                if (max < EntVal[i])
+                {
+                    max = EntVal[i];
+                    index = i + 1;
+                }
+            }
+            else if (VidLen[i] > t)
+            {
+                t--;
+                if (i == 0)
+                {
+                    index = -1;
+                    break;
+                }
+            }
         }
-        
+        cout << index << endl;
     }
     return 0;
-}
-void arr(int b){
-    int a[b];
-    // int b[n];
-    for(int i=0;i<b;i++)
-    {
-        cin>>a[i];
-    // }
-    // for(int i=0;i<n;i++)
-    // {
-        // cin>>b[i];
-    }
 }
