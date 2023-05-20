@@ -8,14 +8,18 @@ int main()
     cin >> t;
     while (t--)
     {
-        bool flag = true;
+        bool flag = false;
         string s;
         cin >> s;
         for (int i = 0, j = s.size() - 1; i < s.size(), j >= 0; i++, j--)
         {
-            if (s[i] != s[j])
+            if (s.size() % 2 == 0)
             {
-                flag = false;
+                break;
+            }
+            if (s[i] == s[j])
+            {
+                flag = true;
                 break;
             }
         }
