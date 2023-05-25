@@ -25,11 +25,11 @@ int main()
         }
         if (flag)
         {
-            cout << "YES\n";
+            cout << "YES" << endl;
         }
         else
         {
-            cout << "NO\n";
+            cout << "NO" << endl;
         }
     }
     return 0;
