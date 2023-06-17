@@ -15,9 +15,9 @@ int main()
         int size, insert;
         cin >> size >> insert;
         string num;
-        string a = to_string(insert);
         cin >> num;
-        int n = stoi(num);
+        string a = to_string(insert);
+
         if (insert == 0)
         {
             cout << num + "0" << endl;
@@ -26,13 +26,15 @@ int main()
         {
             for (int i = 0; i < size; i++)
             {
-                if(num[i] < a[0]){
-                   num.insert(i,to_string(a[0]));
-                   cout << num << endl;
-                   break;
+                if (num[i] < a[0])
+                {
+                    num.insert(i, 1, a[0]);
+                    cout << num << endl;
+                    break;
                 }
-                if(i==(size-1) && num[i] > a[0]){
-                    cout << num+a << endl;
+                if (i == (size - 1) && num[i] >= a[0])
+                {
+                    cout << num + a << endl;
                 }
             }
         }

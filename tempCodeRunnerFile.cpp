@@ -1,1 +1,1 @@
-num+10
+int n = stoi(num);
