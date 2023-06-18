@@ -1,1 +1,3 @@
-int n = stoi(num);
+\
+    // cin.tie(0);                   \
+    // cout.tie(0);
