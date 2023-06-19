@@ -1,4 +1,6 @@
 *.exe
-*FirstPlayer.cpp
+*H-NonDecreasing.cpp
+*I-notDivisiblePermutation.cpp
 *L-Compare.cpp
+*FirstPlayer.cpp
 *M-RobotandLasers.cpp
