@@ -1,3 +1,4 @@
-\
-    // cin.tie(0);                   \
-    // cout.tie(0);
+ // if (v[i] == 0)
+            // {
+            //     v.erase(v.begin() + i);
+            // }
